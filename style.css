@@ -26,8 +26,9 @@ body{
     width:100%;
     height: 100%;
     transform-style: preserve-3d;
-    animation: anim-cube 30s linear infinite;
+    animation: anim-cube 25s linear infinite;
     transform: rotateX(-20deg) rotateY(25deg);
+    scale:50%
 }
 
 @keyframes anim-cube{
@@ -35,7 +36,7 @@ body{
         transform: rotateX(-20deg) rotateY(360deg)
     }
     100%{
-        transform: rotateX(-20deg) rotateY(0degh)
+        transform: rotateX(-20deg) rotateY(0deg)
     }
 }
 
@@ -46,9 +47,150 @@ body{
     height: 600px;
     background: var(--clr);
     transform-style: preserve-3d;
-    transform: rotate(calc(90deg * var(--i))) translateZ(299px);
+    transform: rotateY(calc(90deg * var(--i))) translateZ(299px);
     transition: .5s;
 }
+
+.cube .big span.top{
+    transform:rotateX(90deg) translateZ(299px);
+}
+
+.cube .big span.bottom{
+    transform:rotateX(90deg) translateZ(-299px);
+}
+
+.cube .big span.bottom::before{
+    content:"";
+    position: absolute;
+    inset: 0;
+    transform: translateZ(-150px);
+    background: rgba(0, 0, 0, 0.5);
+    filter: blur(60px);
+}
+
+
+.cube .big span{
+    background: transparent;
+    border: 20px solid #ffa20d;
+    box-shadow: 0px 0px 100px #a06f00
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
