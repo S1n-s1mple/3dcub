@@ -1,4 +1,5 @@
 *{
+    font-family: 'Fredoka', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -9,7 +10,7 @@ body{
     justify-content: center;
     align-items: center;
     min-height:  100vh;
-    background: linear-gradient(to bottom right, #162947, #0c1628)
+    background: linear-gradient(to bottom right, #002662, #ff0062)
 
 }
 
@@ -76,11 +77,98 @@ body{
 
 }
 
+.cube p {
+    position:relative;
+    color: #ffb100;
+    letter-spacing: .05em;
+    top: 40%;
+    left:5%;
+    font-size: 90px;
+    text-shadow: 0px 0px 60px #ffb100;
+    -webkit-text-stroke: 2px black;
 
 
+}
+                        /*маленький куб*/
 
 
+.cube2 {
+    position:absolute;
+    width: 600px;
+    height: 600px;
+    scale:25%;
+    bottom: 32%
+}
 
+.cube2 div {
+    position:absolute;
+    top: 0;
+    left: 0;
+    width:100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    animation: anim-cube 25s linear infinite;
+    transform: rotateX(-20deg) rotateY(25deg);
+
+}
+
+@keyframes anim-cube{
+    0%{
+        transform: rotateX(-20deg) rotateY(360deg)
+    }
+    100%{
+        transform: rotateX(-20deg) rotateY(0deg)
+    }
+}
+
+
+.cube2 .small span{
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: var(--clr);
+    transform-style: preserve-3d;
+    transform: rotateY(calc(90deg * var(--i))) translateZ(-200px);
+    transition: .5s;
+}
+
+.cube2 .small span.top{
+    transform:rotateX(90deg) translateZ(200px);
+}
+
+.cube2 .small span.bottom{
+    transform:rotateX(90deg) translateZ(-200px);
+}
+
+.cube2 .small span.bottom::before{
+    content:"";
+    position: absolute;
+    inset: 0;
+    transform: translateZ(-150px);
+    background: rgba(0, 0, 0, 0.5);
+    filter: blur(60px);
+}
+
+
+.cube2 .small span{
+    background: transparent;
+    border: 20px solid #ff0058;
+    box-shadow: 0px 0px 100px #ff0058
+
+}
+
+.cube2 p {
+    position:relative;
+    color: #ff0058;
+    letter-spacing: .05em;
+    top: 40%;
+    left:5%;
+    font-size: 90px;
+    text-shadow: 0px 0px 60px #ffb100;
+    -webkit-text-stroke: 2px black;
+
+
+}
 
 
 
